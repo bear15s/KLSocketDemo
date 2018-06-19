@@ -66,7 +66,9 @@
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(nullable NSString *)reason wasClean:(BOOL)wasClean{
     NSLog(@"failCode = %zd,Reson = %@",code,reason);
     self.webSocket.delegate = nil;
+    
     self.responseTextView.text = @"断开连接";
+    
 }
 
 
